@@ -26,10 +26,11 @@ my %WriteMakefileArgs = (
     'Dist::Zilla::Plugin::ChangelogFromGit' => '0',
     'Dist::Zilla::Plugin::Git' => '0',
     'Dist::Zilla::Plugin::GitHub' => '0',
+    'Dist::Zilla::Plugin::InstallRelease' => '0',
     'Dist::Zilla::Role::PluginBundle::Easy' => '0',
     'Moose' => '0'
   },
-  'VERSION' => '0.01',
+  'VERSION' => '0.02',
   'test' => {
     'TESTS' => 't/*.t'
   }

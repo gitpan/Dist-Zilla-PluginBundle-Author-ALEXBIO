@@ -1,3 +1,19 @@
+==============================
+9999-99-99 99:99:99 +0000 HEAD
+==============================
+
+  commit d2b8676d3689ca8b49d680eb535eb45acbaf05a1
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Apr 24 22:37:19 2011 +0200
+  
+    bump version
+
+  commit 60e102a06e2f6201915f44a9e971648494c199ac
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Apr 24 22:37:01 2011 +0200
+  
+    add InstallRelease plugin 
+
 ===================================
 End of changes in the last 365 days
 ===================================

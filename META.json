@@ -25,6 +25,7 @@
             "Dist::Zilla::Plugin::ChangelogFromGit" : 0,
             "Dist::Zilla::Plugin::Git" : 0,
             "Dist::Zilla::Plugin::GitHub" : 0,
+            "Dist::Zilla::Plugin::InstallRelease" : 0,
             "Dist::Zilla::Role::PluginBundle::Easy" : 0,
             "Moose" : 0
          }
@@ -40,13 +41,14 @@
       "bugtracker" : {
          "web" : "https://github.com/AlexBio/Dist-Zilla-PluginBundle-Author-ALEXBIO/issues"
       },
+      "homepage" : "http://search.cpan.org/dist/Dist-Zilla-PluginBundle-Author-ALEXBIO/",
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/AlexBio/Dist-Zilla-PluginBundle-Author-ALEXBIO.git",
          "web" : "https://github.com/AlexBio/Dist-Zilla-PluginBundle-Author-ALEXBIO"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
@@ -168,6 +170,11 @@
             "class" : "Dist::Zilla::Plugin::Git::Push",
             "name" : "@Author::ALEXBIO/Git::Push",
             "version" : "1.110500"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::InstallRelease",
+            "name" : "@Author::ALEXBIO/InstallRelease",
+            "version" : "0.007"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",

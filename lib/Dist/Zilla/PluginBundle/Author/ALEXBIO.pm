@@ -1,14 +1,17 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 BEGIN {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.01';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.02';
 }
 
 use Moose;
 
 use Dist::Zilla;
+
 use Dist::Zilla::Plugin::Git;
 use Dist::Zilla::Plugin::GitHub;
 use Dist::Zilla::Plugin::ChangelogFromGit;
+
+use Dist::Zilla::Plugin::InstallRelease;
 
 use warnings;
 use strict;
@@ -21,7 +24,7 @@ Dist::Zilla::PluginBundle::Author::ALEXBIO - ALEXBIO's default Dist::Zilla confi
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -54,6 +57,9 @@ equivalent to the following:
     tag_message = %N %v
 
     [Git::Push]
+
+    [InstallRelease]
+    install_command = cpanm .
 
 =cut
 
@@ -91,6 +97,12 @@ sub configure {
 		}],
 
 		'Git::Push'
+	);
+
+	$self -> add_plugins(
+		['InstallRelease' => {
+			install_command => 'cpanm .'
+		}]
 	);
 }
 
