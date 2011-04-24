@@ -1,0 +1,202 @@
+{
+   "abstract" : "ALEXBIO's default Dist::Zilla config",
+   "author" : [
+      "Alessandro Ghedini <alexbio@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110930",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Dist-Zilla-PluginBundle-Author-ALEXBIO",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Dist::Zilla" : 0,
+            "Dist::Zilla::Plugin::ChangelogFromGit" : 0,
+            "Dist::Zilla::Plugin::Git" : 0,
+            "Dist::Zilla::Plugin::GitHub" : 0,
+            "Dist::Zilla::Role::PluginBundle::Easy" : 0,
+            "Moose" : 0
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : 0
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/AlexBio/Dist-Zilla-PluginBundle-Author-ALEXBIO/issues"
+      },
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/AlexBio/Dist-Zilla-PluginBundle-Author-ALEXBIO.git",
+         "web" : "https://github.com/AlexBio/Dist-Zilla-PluginBundle-Author-ALEXBIO"
+      }
+   },
+   "version" : "0.01",
+   "x_Dist_Zilla" : {
+      "plugins" : [
+         {
+            "class" : "Dist::Zilla::Plugin::GatherDir",
+            "name" : "@Author::ALEXBIO/@Basic/GatherDir",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::PruneCruft",
+            "name" : "@Author::ALEXBIO/@Basic/PruneCruft",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ManifestSkip",
+            "name" : "@Author::ALEXBIO/@Basic/ManifestSkip",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::MetaYAML",
+            "name" : "@Author::ALEXBIO/@Basic/MetaYAML",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::License",
+            "name" : "@Author::ALEXBIO/@Basic/License",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Readme",
+            "name" : "@Author::ALEXBIO/@Basic/Readme",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ExtraTests",
+            "name" : "@Author::ALEXBIO/@Basic/ExtraTests",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ExecDir",
+            "name" : "@Author::ALEXBIO/@Basic/ExecDir",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ShareDir",
+            "name" : "@Author::ALEXBIO/@Basic/ShareDir",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::MakeMaker",
+            "name" : "@Author::ALEXBIO/@Basic/MakeMaker",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Manifest",
+            "name" : "@Author::ALEXBIO/@Basic/Manifest",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::TestRelease",
+            "name" : "@Author::ALEXBIO/@Basic/TestRelease",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ConfirmRelease",
+            "name" : "@Author::ALEXBIO/@Basic/ConfirmRelease",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::UploadToCPAN",
+            "name" : "@Author::ALEXBIO/@Basic/UploadToCPAN",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::GitHub::Meta",
+            "name" : "@Author::ALEXBIO/@GitHub/GitHub::Meta",
+            "version" : "0.06"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::GitHub::Update",
+            "name" : "@Author::ALEXBIO/@GitHub/GitHub::Update",
+            "version" : "0.06"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::MetaConfig",
+            "name" : "@Author::ALEXBIO/MetaConfig",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::MetaJSON",
+            "name" : "@Author::ALEXBIO/MetaJSON",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::AutoPrereqs",
+            "name" : "@Author::ALEXBIO/AutoPrereqs",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::PodVersion",
+            "name" : "@Author::ALEXBIO/PodVersion",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::PkgVersion",
+            "name" : "@Author::ALEXBIO/PkgVersion",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ChangelogFromGit",
+            "name" : "@Author::ALEXBIO/ChangelogFromGit",
+            "version" : "0.002"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Git::Tag",
+            "name" : "@Author::ALEXBIO/Git::Tag",
+            "version" : "1.110500"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Git::Push",
+            "name" : "@Author::ALEXBIO/Git::Push",
+            "version" : "1.110500"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::FinderCode",
+            "name" : ":InstallModules",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::FinderCode",
+            "name" : ":TestFiles",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::FinderCode",
+            "name" : ":ExecFiles",
+            "version" : "4.200004"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::FinderCode",
+            "name" : ":ShareFiles",
+            "version" : "4.200004"
+         }
+      ],
+      "zilla" : {
+         "class" : "Dist::Zilla::Dist::Builder",
+         "config" : {
+            "is_trial" : 0
+         },
+         "version" : "4.200004"
+      }
+   }
+}
+
