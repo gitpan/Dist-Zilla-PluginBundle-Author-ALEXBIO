@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 BEGIN {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.02';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.03';
 }
 
 use Moose;
@@ -24,7 +24,7 @@ Dist::Zilla::PluginBundle::Author::ALEXBIO - ALEXBIO's default Dist::Zilla confi
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -99,10 +99,13 @@ sub configure {
 		'Git::Push'
 	);
 
+	# after release
 	$self -> add_plugins(
 		['InstallRelease' => {
 			install_command => 'cpanm .'
-		}]
+		}],
+
+		'Clean'
 	);
 }
 
@@ -121,5 +124,9 @@ by the Free Software Foundation; or the Artistic License.
 See http://dev.perl.org/licenses/ for more information.
 
 =cut
+
+no Moose;
+
+__PACKAGE__ -> meta -> make_immutable;
 
 1; # End of Dist::Zilla::PluginBundle::Author::ALEXBIO

@@ -2,6 +2,28 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit 868e40f37a0aba4de7f097b8e1497a35ec13125c
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Apr 24 23:11:29 2011 +0200
+  
+    bump version
+
+  commit 5cce0a411a88b6af605a02b943e5f725de695615
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Apr 24 23:10:38 2011 +0200
+  
+    make class immutable
+
+  commit 6f2ad82058c3d784efb6cf7e563a408fc2fa7289
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Apr 24 23:09:27 2011 +0200
+  
+    add Clean plugin 
+
+===============================
+2011-04-24 22:37:19 +0200 v0.02
+===============================
+
   commit d2b8676d3689ca8b49d680eb535eb45acbaf05a1
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Sun Apr 24 22:37:19 2011 +0200

@@ -25,7 +25,7 @@ resources:
   bugtracker: https://github.com/AlexBio/Dist-Zilla-PluginBundle-Author-ALEXBIO/issues
   homepage: http://search.cpan.org/dist/Dist-Zilla-PluginBundle-Author-ALEXBIO/
   repository: git://github.com/AlexBio/Dist-Zilla-PluginBundle-Author-ALEXBIO.git
-version: 0.02
+version: 0.03
 x_Dist_Zilla:
   plugins:
     -
@@ -128,6 +128,10 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::InstallRelease
       name: '@Author::ALEXBIO/InstallRelease'
       version: 0.007
+    -
+      class: Dist::Zilla::Plugin::Clean
+      name: '@Author::ALEXBIO/Clean'
+      version: 0.01
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
