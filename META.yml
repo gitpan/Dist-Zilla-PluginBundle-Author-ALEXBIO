@@ -16,6 +16,7 @@ name: Dist-Zilla-PluginBundle-Author-ALEXBIO
 requires:
   Dist::Zilla: 0
   Dist::Zilla::Plugin::ChangelogFromGit: 0
+  Dist::Zilla::Plugin::Clean: 0
   Dist::Zilla::Plugin::Git: 0
   Dist::Zilla::Plugin::GitHub: 0
   Dist::Zilla::Plugin::InstallRelease: 0
@@ -25,7 +26,7 @@ resources:
   bugtracker: https://github.com/AlexBio/Dist-Zilla-PluginBundle-Author-ALEXBIO/issues
   homepage: http://search.cpan.org/dist/Dist-Zilla-PluginBundle-Author-ALEXBIO/
   repository: git://github.com/AlexBio/Dist-Zilla-PluginBundle-Author-ALEXBIO.git
-version: 0.03
+version: 0.04
 x_Dist_Zilla:
   plugins:
     -
@@ -87,11 +88,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::GitHub::Meta
       name: '@Author::ALEXBIO/@GitHub/GitHub::Meta'
-      version: 0.06
+      version: 0.07
     -
       class: Dist::Zilla::Plugin::GitHub::Update
       name: '@Author::ALEXBIO/@GitHub/GitHub::Update'
-      version: 0.06
+      version: 0.07
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: '@Author::ALEXBIO/MetaConfig'
@@ -131,7 +132,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Clean
       name: '@Author::ALEXBIO/Clean'
-      version: 0.01
+      version: 0.02
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

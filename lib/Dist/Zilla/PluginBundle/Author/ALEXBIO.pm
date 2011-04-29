@@ -1,16 +1,16 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 BEGIN {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.03';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.04';
 }
 
 use Moose;
-
 use Dist::Zilla;
 
 use Dist::Zilla::Plugin::Git;
 use Dist::Zilla::Plugin::GitHub;
 use Dist::Zilla::Plugin::ChangelogFromGit;
 
+use Dist::Zilla::Plugin::Clean;
 use Dist::Zilla::Plugin::InstallRelease;
 
 use warnings;
@@ -24,7 +24,7 @@ Dist::Zilla::PluginBundle::Author::ALEXBIO - ALEXBIO's default Dist::Zilla confi
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -60,6 +60,8 @@ equivalent to the following:
 
     [InstallRelease]
     install_command = cpanm .
+
+    [Clean]
 
 =cut
 

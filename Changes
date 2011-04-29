@@ -2,6 +2,22 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit d5293dddf980ab3fd6c0284d7ad49a2fe3b00537
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Fri Apr 29 13:27:40 2011 +0200
+  
+    bump version
+
+  commit 8d93bfd8d541d116d883234a45f161a1674aae95
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Fri Apr 29 11:42:39 2011 +0200
+  
+    update depends and docs for Clean plugin 
+
+===============================
+2011-04-24 23:11:29 +0200 v0.03
+===============================
+
   commit 868e40f37a0aba4de7f097b8e1497a35ec13125c
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Sun Apr 24 23:11:29 2011 +0200
