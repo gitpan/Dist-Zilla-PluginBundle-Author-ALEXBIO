@@ -4,7 +4,7 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
@@ -15,7 +15,7 @@ my %WriteMakefileArgs = (
     'Test::More' => '0'
   },
   'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+    'ExtUtils::MakeMaker' => '6.30'
   },
   'DISTNAME' => 'Dist-Zilla-PluginBundle-Author-ALEXBIO',
   'EXE_FILES' => [],
@@ -28,10 +28,11 @@ my %WriteMakefileArgs = (
     'Dist::Zilla::Plugin::Git' => '0',
     'Dist::Zilla::Plugin::GitHub' => '0',
     'Dist::Zilla::Plugin::InstallRelease' => '0',
+    'Dist::Zilla::Plugin::MakeMaker::Awesome' => '0',
     'Dist::Zilla::Role::PluginBundle::Easy' => '0',
     'Moose' => '0'
   },
-  'VERSION' => '0.04',
+  'VERSION' => '0.05',
   'test' => {
     'TESTS' => 't/*.t'
   }

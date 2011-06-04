@@ -2,6 +2,46 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit 4334c2a906faa49829e961b607b2ddac57d68633
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jun 4 14:27:23 2011 +0200
+  
+    bump version
+
+  commit 542068b540e65c2d22f2d690f67d42d047c5b7cb
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jun 4 14:26:55 2011 +0200
+  
+    fix default attributes value
+
+  commit a782c32e408c62e2c9dbd1d508f97561cd1929aa
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jun 4 14:04:31 2011 +0200
+  
+    update docs
+
+  commit b336350ed6f5b9ea05d5defc9902246a517c7b88
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jun 4 13:51:38 2011 +0200
+  
+    optionally make a fake release
+
+  commit 96f9a68f34e4b92499b2d70f2c654b4df43a9821
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jun 4 13:47:23 2011 +0200
+  
+    use MakeMaker if requested
+
+  commit c836f65c34b2406495017a4673af638254f43bdf
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jun 4 13:41:55 2011 +0200
+  
+    explicitly add plugins of the Basic bundle 
+
+===============================
+2011-04-29 13:27:40 +0200 v0.04
+===============================
+
   commit d5293dddf980ab3fd6c0284d7ad49a2fe3b00537
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Fri Apr 29 13:27:40 2011 +0200
