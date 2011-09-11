@@ -2,6 +2,66 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit 2b6fe4205b1ec9b6072f99d9ecb6ea5c41ee2c98
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Sep 11 15:21:00 2011 +0200
+  
+    bump version
+
+  commit 0f94d995118697c0dbc16a5270578d1dd5f54e7b
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Sep 11 15:19:06 2011 +0200
+  
+    do not generate pod_coverage test
+
+  commit 68b4da2c4f60fd47d326a6123ef6d6f9b6ec4f4a
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Sep 11 15:18:53 2011 +0200
+  
+    rename test_podcoverage -> pod_coverage
+
+  commit b6705d984f1b855242f91a3c27e493f3b2b31065
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Sep 11 15:04:15 2011 +0200
+  
+    remove tests
+
+  commit 262bd163c2cd62f31cd01c98db2eb8734e698d5d
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Sep 11 15:04:08 2011 +0200
+  
+    add 'test_podcoverage' option
+
+  commit dab3c5e1c9f171b36aa914cc9a3814085f65648c
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Sep 11 14:53:36 2011 +0200
+  
+    Revert "use metacpan URL"
+
+    This reverts commit 121efe0ff014831ecdc2904146f2345c41dc8057.
+
+  commit 98518ee2e191bfb37dc2a16e5d76ef808f044b04
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Sep 11 14:43:46 2011 +0200
+  
+    add test plugins
+
+  commit 121efe0ff014831ecdc2904146f2345c41dc8057
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Thu Aug 25 16:59:26 2011 +0200
+  
+    use metacpan URL
+
+  commit 5a8a61d71eb3146f23bd6d75e0b5de51288984ed
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Wed Aug 10 12:43:06 2011 +0200
+  
+    clean-up 
+
+===============================
+2011-06-04 14:27:23 +0200 v0.05
+===============================
+
   commit 4334c2a906faa49829e961b607b2ddac57d68633
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Sat Jun 4 14:27:23 2011 +0200

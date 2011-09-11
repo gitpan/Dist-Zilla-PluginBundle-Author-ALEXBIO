@@ -1,19 +1,10 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
-BEGIN {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.05';
+{
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.06';
 }
 
 use Moose;
 use Dist::Zilla;
-
-use Dist::Zilla::Plugin::Git;
-use Dist::Zilla::Plugin::GitHub;
-use Dist::Zilla::Plugin::ChangelogFromGit;
-
-use Dist::Zilla::Plugin::MakeMaker::Awesome;
-
-use Dist::Zilla::Plugin::Clean;
-use Dist::Zilla::Plugin::InstallRelease;
 
 use warnings;
 use strict;
@@ -40,13 +31,23 @@ has 'fake_release' => (
 		}
 );
 
+has 'pod_coverage' => (
+	is      => 'ro',
+	isa     => 'Bool',
+	lazy    => 1,
+	default => sub {
+			defined $_[0] -> payload -> {pod_coverage} ?
+				$_[0] -> payload -> {pod_coverage} : 1
+		}
+);
+
 =head1 NAME
 
 Dist::Zilla::PluginBundle::Author::ALEXBIO - ALEXBIO's default Dist::Zilla config
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -70,6 +71,11 @@ equivalent to the following:
 
     [PodVersion]
     [PkgVersion]
+
+    [Test::Compile]
+    [Test::CheckManifest]
+    [PodSyntaxTests]
+    [PodCoverageTests]
 
     [ChangelogFromGit]
     tag_regexp = ^v
@@ -134,6 +140,19 @@ sub configure {
 		}],
 	);
 
+	# test plugins
+	$self -> add_plugins(
+		'Test::Compile',
+		'Test::CheckManifest',
+		'PodSyntaxTests'
+	);
+
+	if ($self -> pod_coverage) {
+		$self -> add_plugins(
+			'PodCoverageTests'
+		);
+	}
+
 	# release plugins
 	if ($self -> fake_release) {
 		$self -> add_plugins( 'FakeRelease' );
@@ -147,10 +166,7 @@ sub configure {
 
 	# after release
 	$self -> add_plugins(
-		['InstallRelease' => {
-			install_command => 'cpanm .'
-		}],
-
+		['InstallRelease' => { install_command => 'cpanm .' }],
 		'Clean'
 	);
 }

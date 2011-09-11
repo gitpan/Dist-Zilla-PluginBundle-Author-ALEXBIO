@@ -7,7 +7,6 @@ Makefile.PL
 README
 dist.ini
 lib/Dist/Zilla/PluginBundle/Author/ALEXBIO.pm
-t/00-load.t
-t/boilerplate.t
-t/manifest.t
-t/pod.t
+t/00-compile.t
+t/release-check-manifest.t
+t/release-pod-syntax.t
