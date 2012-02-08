@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.06';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.07';
 }
 
 use Moose;
@@ -47,7 +47,7 @@ Dist::Zilla::PluginBundle::Author::ALEXBIO - ALEXBIO's default Dist::Zilla confi
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
@@ -69,6 +69,8 @@ equivalent to the following:
 
     [AutoPrereqs]
 
+    [Git::NextVersion]
+
     [PodVersion]
     [PkgVersion]
 
@@ -76,9 +78,9 @@ equivalent to the following:
     [Test::CheckManifest]
     [PodSyntaxTests]
     [PodCoverageTests]
+    [ReportVersions]
 
     [ChangelogFromGit]
-    tag_regexp = ^v
     file_name   = Changes
 
     [Git::Tag]
@@ -124,6 +126,13 @@ sub configure {
 		'GitHub'
 	);
 
+	# bump version
+	$self -> add_plugins(
+		['Git::NextVersion' => {
+			first_version => 0.01
+		}],
+	);
+
 	# core plugins
 	$self -> add_plugins(
 		'MetaConfig',
@@ -135,7 +144,6 @@ sub configure {
 
 	$self -> add_plugins(
 		['ChangelogFromGit' => {
-			tag_regexp => '^v',
 			file_name  => 'Changes'
 		}],
 	);
@@ -144,7 +152,8 @@ sub configure {
 	$self -> add_plugins(
 		'Test::Compile',
 		'Test::CheckManifest',
-		'PodSyntaxTests'
+		'PodSyntaxTests',
+		'ReportVersions'
 	);
 
 	if ($self -> pod_coverage) {
