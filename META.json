@@ -28,6 +28,7 @@
             "Dist::Zilla::Plugin::GitHub" : "0",
             "Dist::Zilla::Plugin::InstallRelease" : "0",
             "Dist::Zilla::Plugin::MakeMaker::Awesome" : "0",
+            "Dist::Zilla::Plugin::ReportVersions" : "0",
             "Dist::Zilla::Plugin::Test::CheckManifest" : "0",
             "Dist::Zilla::Plugin::Test::Compile" : "0",
             "Dist::Zilla::Role::PluginBundle::Easy" : "0",
@@ -38,14 +39,17 @@
       },
       "test" : {
          "requires" : {
+            "Carp" : "0",
             "File::Find" : "0",
             "File::Temp" : "0",
-            "Test::More" : "0"
+            "Scalar::Util" : "0",
+            "Test::More" : "0.94",
+            "perl" : "5.004"
          }
       }
    },
    "release_status" : "stable",
-   "version" : "0.07",
+   "version" : "0.08",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
@@ -172,6 +176,11 @@
             "class" : "Dist::Zilla::Plugin::PodSyntaxTests",
             "name" : "@Author::ALEXBIO/PodSyntaxTests",
             "version" : "4.300007"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ReportVersions",
+            "name" : "@Author::ALEXBIO/ReportVersions",
+            "version" : "1.110730"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Tag",
