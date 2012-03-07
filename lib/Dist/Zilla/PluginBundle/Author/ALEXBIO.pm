@@ -1,5 +1,8 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.9';
+}
+{
   $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.08';
 }
 
@@ -123,14 +126,12 @@ sub configure {
 
 	# github bundle
 	$self -> add_bundle(
-		'GitHub'
+		'GitHub' => { metacpan => 1 }
 	);
 
 	# bump version
 	$self -> add_plugins(
-		['Git::NextVersion' => {
-			first_version => 0.01
-		}],
+		['Git::NextVersion' => { first_version => 0.01 }],
 	);
 
 	# core plugins
@@ -143,9 +144,7 @@ sub configure {
 	);
 
 	$self -> add_plugins(
-		['ChangelogFromGit' => {
-			file_name  => 'Changes'
-		}],
+		['ChangelogFromGit' => { file_name  => 'Changes' }],
 	);
 
 	# test plugins

@@ -1,214 +1,32 @@
 ==================================================
-Changes from 2011-02-15 00:00:00 +0000 to present.
+Changes from 2011-03-08 00:00:00 +0000 to present.
 ==================================================
 
------------------------------------------
-version 0.08 at 2012-02-15 11:02:57 +0000
------------------------------------------
+----------------------------------------
+version 0.9 at 2012-03-07 11:32:51 +0000
+----------------------------------------
 
-  Change: 4a6439179b463da2db1f4aedc180103fab8e252f
+  Change: 6d38a037d12519094ffe82143e8dcd8b7c114852
   Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-02-15 12:02:34 +0000
-
-    add ReportVersions to dependencies 
-
------------------------------------------
-version 0.07 at 2012-02-08 13:33:17 +0000
------------------------------------------
-
-  Change: 5a698ff0de5242b6792531f56322a81843c5e533
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-02-08 14:33:17 +0000
-
-    use ReportVersions too 
-
-  Change: eef7b735072c913a42149f59c86cd06130a1b8f3
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-02-08 14:32:12 +0000
-
-    use Git::NextVersion from now on 
-
-  Change: 68cd93d13e6f04d057988078bebc9d52ac336369
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-02-08 14:24:52 +0000
-
-    fix ChangelogFromGit config 
-
------------------------------------------
-version 0.06 at 2011-09-11 13:21:00 +0000
------------------------------------------
-
-  Change: 2b6fe4205b1ec9b6072f99d9ecb6ea5c41ee2c98
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-09-11 15:21:00 +0000
-
-    bump version 
-
-  Change: 0f94d995118697c0dbc16a5270578d1dd5f54e7b
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-09-11 15:19:06 +0000
-
-    do not generate pod_coverage test 
-
-  Change: 68b4da2c4f60fd47d326a6123ef6d6f9b6ec4f4a
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-09-11 15:18:53 +0000
-
-    rename test_podcoverage -> pod_coverage 
-
-  Change: b6705d984f1b855242f91a3c27e493f3b2b31065
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-09-11 15:04:15 +0000
-
-    remove tests 
-
-  Change: 262bd163c2cd62f31cd01c98db2eb8734e698d5d
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-09-11 15:04:08 +0000
-
-    add 'test_podcoverage' option 
-
-  Change: dab3c5e1c9f171b36aa914cc9a3814085f65648c
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-09-11 14:53:36 +0000
-
-    Revert "use metacpan URL"
-
-    This reverts commit 121efe0ff014831ecdc2904146f2345c41dc8057. 
-
-  Change: 98518ee2e191bfb37dc2a16e5d76ef808f044b04
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-09-11 14:45:47 +0000
-
-    add test plugins 
-
-  Change: 121efe0ff014831ecdc2904146f2345c41dc8057
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-08-25 16:59:26 +0000
-
-    use metacpan URL 
-
-  Change: 5a8a61d71eb3146f23bd6d75e0b5de51288984ed
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-08-10 12:43:06 +0000
+  Date : 2012-03-07 12:32:38 +0000
 
     clean-up 
 
------------------------------------------
-version 0.05 at 2011-06-04 12:27:23 +0000
------------------------------------------
-
-  Change: 4334c2a906faa49829e961b607b2ddac57d68633
+  Change: e79ea5121de1bd8108dfada6e785edcb9e45a900
   Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-06-04 14:27:23 +0000
+  Date : 2012-03-07 12:30:15 +0000
 
-    bump version 
+    use metacpan url 
 
-  Change: 542068b540e65c2d22f2d690f67d42d047c5b7cb
+----------------------------------------
+version 0.8 at 2012-02-26 19:33:14 +0000
+----------------------------------------
+
+  Change: 3d29888f84c7a3bffd0315d3e55955cc0e97be42
   Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-06-04 14:26:55 +0000
+  Date : 2012-02-26 20:33:14 +0000
 
-    fix default attributes value 
-
-  Change: a782c32e408c62e2c9dbd1d508f97561cd1929aa
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-06-04 14:04:31 +0000
-
-    update docs 
-
-  Change: b336350ed6f5b9ea05d5defc9902246a517c7b88
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-06-04 13:51:38 +0000
-
-    optionally make a fake release 
-
-  Change: 96f9a68f34e4b92499b2d70f2c654b4df43a9821
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-06-04 13:47:23 +0000
-
-    use MakeMaker if requested 
-
-  Change: c836f65c34b2406495017a4673af638254f43bdf
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-06-04 13:41:55 +0000
-
-    explicitly add plugins of the Basic bundle 
-
------------------------------------------
-version 0.04 at 2011-04-29 11:27:40 +0000
------------------------------------------
-
-  Change: d5293dddf980ab3fd6c0284d7ad49a2fe3b00537
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-04-29 13:27:40 +0000
-
-    bump version 
-
-  Change: 8d93bfd8d541d116d883234a45f161a1674aae95
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-04-29 11:42:39 +0000
-
-    update depends and docs for Clean plugin 
-
------------------------------------------
-version 0.03 at 2011-04-24 21:11:29 +0000
------------------------------------------
-
-  Change: 868e40f37a0aba4de7f097b8e1497a35ec13125c
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-04-24 23:11:29 +0000
-
-    bump version 
-
-  Change: 5cce0a411a88b6af605a02b943e5f725de695615
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-04-24 23:10:38 +0000
-
-    make class immutable 
-
-  Change: 6f2ad82058c3d784efb6cf7e563a408fc2fa7289
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-04-24 23:09:27 +0000
-
-    add Clean plugin 
-
------------------------------------------
-version 0.02 at 2011-04-24 20:37:19 +0000
------------------------------------------
-
-  Change: d2b8676d3689ca8b49d680eb535eb45acbaf05a1
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-04-24 22:37:19 +0000
-
-    bump version 
-
-  Change: 60e102a06e2f6201915f44a9e971648494c199ac
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-04-24 22:37:01 +0000
-
-    add InstallRelease plugin 
-
------------------------------------------
-version 0.01 at 2011-04-24 19:05:36 +0000
------------------------------------------
-
-  Change: 9f736e9c4e787b63a5f7ef1f6b874fc0fe7155d6
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-04-24 21:05:36 +0000
-
-    bottstrap done 
-
-  Change: 5697c2f874e06ba9cb18f193d51867077f7dece2
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-04-24 21:05:14 +0000
-
-    fix bundles configuration 
-
-  Change: a16808f3f406e92852e226c237d16435b39b959a
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2011-04-24 21:01:08 +0000
-
-    first commit 
+    initial re-import 
 
 ================
 End of releases.
