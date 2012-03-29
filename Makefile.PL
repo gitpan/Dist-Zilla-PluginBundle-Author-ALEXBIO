@@ -12,11 +12,9 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "ALEXBIO's default Dist::Zilla config",
   "AUTHOR" => "Alessandro Ghedini <alexbio\@cpan.org>",
   "BUILD_REQUIRES" => {
-    "Carp" => 0,
     "File::Find" => 0,
     "File::Temp" => 0,
-    "Scalar::Util" => 0,
-    "Test::More" => "0.94"
+    "Test::More" => 0
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -33,7 +31,6 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Plugin::GitHub" => 0,
     "Dist::Zilla::Plugin::InstallRelease" => 0,
     "Dist::Zilla::Plugin::MakeMaker::Awesome" => 0,
-    "Dist::Zilla::Plugin::ReportVersions" => 0,
     "Dist::Zilla::Plugin::Test::CheckManifest" => 0,
     "Dist::Zilla::Plugin::Test::Compile" => 0,
     "Dist::Zilla::Role::PluginBundle::Easy" => 0,
@@ -41,7 +38,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.9",
+  "VERSION" => "1.0",
   "test" => {
     "TESTS" => "t/*.t"
   }

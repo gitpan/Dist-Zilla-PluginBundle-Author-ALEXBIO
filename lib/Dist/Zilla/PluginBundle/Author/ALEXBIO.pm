@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.9';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.0';
 }
 {
   $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.08';
@@ -81,7 +81,6 @@ equivalent to the following:
     [Test::CheckManifest]
     [PodSyntaxTests]
     [PodCoverageTests]
-    [ReportVersions]
 
     [ChangelogFromGit]
     file_name   = Changes
@@ -151,8 +150,7 @@ sub configure {
 	$self -> add_plugins(
 		'Test::Compile',
 		'Test::CheckManifest',
-		'PodSyntaxTests',
-		'ReportVersions'
+		'PodSyntaxTests'
 	);
 
 	if ($self -> pod_coverage) {
