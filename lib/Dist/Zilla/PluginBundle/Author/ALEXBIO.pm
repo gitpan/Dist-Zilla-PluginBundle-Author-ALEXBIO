@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.2';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.3';
 }
 
 use strict;
@@ -184,12 +184,13 @@ sub configure {
 	if ($self -> fake_release) {
 		$self -> add_plugins('FakeRelease');
 	} else {
+		$self -> add_plugins(
+			['Git::Tag' => { tag_message => '%N %v' }]
+		);
+
 		$self -> add_plugins('Git::Push') if $self -> git_push;
 
-		$self -> add_plugins(
-			['Git::Tag' => { tag_message => '%N %v' }],
-			'UploadToCPAN'
-		);
+		$self -> add_plugins('UploadToCPAN');
 	}
 
 	# after release
