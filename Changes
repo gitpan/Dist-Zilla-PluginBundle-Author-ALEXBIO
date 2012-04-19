@@ -1,9 +1,25 @@
 ==================================================
-Changes from 2011-03-30 00:00:00 +0000 to present.
+Changes from 2011-04-20 00:00:00 +0000 to present.
 ==================================================
 
 ----------------------------------------
-version 1.0 at 2012-03-29 11:39:51 +0000
+version 1.1 at 2012-04-19 10:41:21 +0000
+----------------------------------------
+
+  Change: fd719aa59fbf639cacb85c27bba907873eb0addb
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-04-19 12:40:36 +0000
+
+    use Bootstrap::lib plugin 
+
+  Change: 7b27fe6609fab8f0c8b1122dd32177c81c0aeddc
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-04-16 21:03:32 +0000
+
+    clean-up 
+
+----------------------------------------
+version 1.0 at 2012-03-29 11:37:06 +0000
 ----------------------------------------
 
   Change: 9b0e6a97635669a0e8bc500108db5200b70ef177

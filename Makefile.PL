@@ -25,6 +25,7 @@ my %WriteMakefileArgs = (
   "NAME" => "Dist::Zilla::PluginBundle::Author::ALEXBIO",
   "PREREQ_PM" => {
     "Dist::Zilla" => 0,
+    "Dist::Zilla::Plugin::Bootstrap::lib" => 0,
     "Dist::Zilla::Plugin::ChangelogFromGit" => 0,
     "Dist::Zilla::Plugin::Clean" => 0,
     "Dist::Zilla::Plugin::Git" => 0,
@@ -38,7 +39,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.0",
+  "VERSION" => "1.1",
   "test" => {
     "TESTS" => "t/*.t"
   }

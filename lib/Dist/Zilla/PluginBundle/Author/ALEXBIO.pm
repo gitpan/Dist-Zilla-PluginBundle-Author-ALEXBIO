@@ -1,16 +1,13 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.0';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.1';
 }
-{
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '0.08';
-}
+
+use strict;
+use warnings;
 
 use Moose;
 use Dist::Zilla;
-
-use warnings;
-use strict;
 
 with 'Dist::Zilla::Role::PluginBundle::Easy';
 
@@ -125,7 +122,9 @@ sub configure {
 
 	# github bundle
 	$self -> add_bundle(
-		'GitHub' => { metacpan => 1 }
+		'GitHub' => {
+			metacpan  => 1
+		}
 	);
 
 	# bump version
