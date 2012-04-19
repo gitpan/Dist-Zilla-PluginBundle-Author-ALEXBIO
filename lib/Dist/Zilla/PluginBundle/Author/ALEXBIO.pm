@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.1';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.2';
 }
 
 use strict;
@@ -12,32 +12,52 @@ use Dist::Zilla;
 with 'Dist::Zilla::Role::PluginBundle::Easy';
 
 has 'makemaker' => (
-	is      => 'ro',
-	isa     => 'Bool',
-	lazy    => 1,
-	default => sub {
+	is	=> 'ro',
+	isa	=> 'Bool',
+	lazy	=> 1,
+	default	=> sub {
 			defined $_[0] -> payload -> {makemaker} ?
 				$_[0] -> payload -> {makemaker} : 1
 		}
 );
 
 has 'fake_release' => (
-	is      => 'ro',
-	isa     => 'Bool',
-	lazy    => 1,
-	default => sub {
+	is	=> 'ro',
+	isa	=> 'Bool',
+	lazy	=> 1,
+	default	=> sub {
 			defined $_[0] -> payload -> {fake_release} ?
 				$_[0] -> payload -> {fake_release} : 0
 		}
 );
 
 has 'pod_coverage' => (
-	is      => 'ro',
-	isa     => 'Bool',
-	lazy    => 1,
-	default => sub {
+	is	=> 'ro',
+	isa	=> 'Bool',
+	lazy	=> 1,
+	default	=> sub {
 			defined $_[0] -> payload -> {pod_coverage} ?
 				$_[0] -> payload -> {pod_coverage} : 1
+		}
+);
+
+has 'git_push' => (
+	is	=> 'ro',
+	isa	=> 'Bool',
+	lazy	=> 1,
+	default	=> sub {
+			defined $_[0] -> payload -> {git_push} ?
+				$_[0] -> payload -> {git_push} : 1
+		}
+);
+
+has 'github' => (
+	is	=> 'ro',
+	isa	=> 'Bool',
+	lazy	=> 1,
+	default	=> sub {
+			defined $_[0] -> payload -> {github} ?
+				$_[0] -> payload -> {github} : 1
 		}
 );
 
@@ -121,11 +141,13 @@ sub configure {
 	}
 
 	# github bundle
-	$self -> add_bundle(
-		'GitHub' => {
-			metacpan  => 1
-		}
-	);
+	if ($self -> github) {
+		$self -> add_bundle(
+			'GitHub' => {
+				metacpan  => 1
+			}
+		);
+	}
 
 	# bump version
 	$self -> add_plugins(
@@ -160,11 +182,12 @@ sub configure {
 
 	# release plugins
 	if ($self -> fake_release) {
-		$self -> add_plugins( 'FakeRelease' );
+		$self -> add_plugins('FakeRelease');
 	} else {
+		$self -> add_plugins('Git::Push') if $self -> git_push;
+
 		$self -> add_plugins(
 			['Git::Tag' => { tag_message => '%N %v' }],
-			'Git::Push',
 			'UploadToCPAN'
 		);
 	}

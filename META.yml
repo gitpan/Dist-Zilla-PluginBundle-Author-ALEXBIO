@@ -30,9 +30,7 @@ requires:
   Moose: 0
   strict: 0
   warnings: 0
-resources:
-  repository: git://github.com/AlexBio/Dist-Zilla-PluginBundle-Author-ALEXBIO.git
-version: 1.1
+version: 1.2
 x_Dist_Zilla:
   plugins:
     -
@@ -88,14 +86,6 @@ x_Dist_Zilla:
       name: '@Author::ALEXBIO/MakeMaker'
       version: 4.300014
     -
-      class: Dist::Zilla::Plugin::GitHub::Meta
-      name: '@Author::ALEXBIO/@GitHub/GitHub::Meta'
-      version: 0.19
-    -
-      class: Dist::Zilla::Plugin::GitHub::Update
-      name: '@Author::ALEXBIO/@GitHub/GitHub::Update'
-      version: 0.19
-    -
       class: Dist::Zilla::Plugin::Git::NextVersion
       name: '@Author::ALEXBIO/Git::NextVersion'
       version: 1.121010
@@ -138,10 +128,6 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Git::Tag
       name: '@Author::ALEXBIO/Git::Tag'
-      version: 1.121010
-    -
-      class: Dist::Zilla::Plugin::Git::Push
-      name: '@Author::ALEXBIO/Git::Push'
       version: 1.121010
     -
       class: Dist::Zilla::Plugin::UploadToCPAN
