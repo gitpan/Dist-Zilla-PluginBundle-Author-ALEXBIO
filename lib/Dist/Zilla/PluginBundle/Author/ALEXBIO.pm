@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.3';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.4';
 }
 
 use strict;
@@ -67,7 +67,7 @@ Dist::Zilla::PluginBundle::Author::ALEXBIO - ALEXBIO's default Dist::Zilla confi
 
 =head1 VERSION
 
-version 0.08
+version 1.4
 
 =head1 SYNOPSIS
 
@@ -211,6 +211,18 @@ If set to '1' (default), the C<MakeMaker> plugin is used.
 =item C<fake_relase>
 
 If set to '1', the release will be faked using the C<FakeRelease> plugin.
+
+=item C<pod_coverage>
+
+If set to '1' (default), the C<PodCoverageTest> plugin is used.
+
+=item C<github>
+
+If set to '1' (default), the C<GitHub> bundle is used.
+
+=item C<git_push>
+
+If set to '1' (default), the C<Git::Push> plugin is used.
 
 =back
 
