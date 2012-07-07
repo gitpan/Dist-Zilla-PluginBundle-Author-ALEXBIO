@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.4';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.5';
 }
 
 use strict;
@@ -10,6 +10,16 @@ use Moose;
 use Dist::Zilla;
 
 with 'Dist::Zilla::Role::PluginBundle::Easy';
+
+has 'repo' => (
+	is	=> 'ro',
+	isa	=> 'Str',
+	lazy	=> 1,
+	default	=> sub {
+			defined $_[0] -> payload -> {repo} ?
+				$_[0] -> payload -> {repo} : undef
+		}
+);
 
 has 'makemaker' => (
 	is	=> 'ro',
@@ -67,7 +77,7 @@ Dist::Zilla::PluginBundle::Author::ALEXBIO - ALEXBIO's default Dist::Zilla confi
 
 =head1 VERSION
 
-version 1.4
+version 1.5
 
 =head1 SYNOPSIS
 
@@ -144,7 +154,8 @@ sub configure {
 	if ($self -> github) {
 		$self -> add_bundle(
 			'GitHub' => {
-				metacpan  => 1
+				metacpan  => 1,
+				repo      => $self -> repo
 			}
 		);
 	}
