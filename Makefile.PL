@@ -26,7 +26,6 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Dist::Zilla" => 0,
     "Dist::Zilla::Plugin::Bootstrap::lib" => 0,
-    "Dist::Zilla::Plugin::ChangelogFromGit" => 0,
     "Dist::Zilla::Plugin::Clean" => 0,
     "Dist::Zilla::Plugin::Git" => 0,
     "Dist::Zilla::Plugin::GitHub" => 0,
@@ -39,7 +38,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.5",
+  "VERSION" => "1.6",
   "test" => {
     "TESTS" => "t/*.t"
   }

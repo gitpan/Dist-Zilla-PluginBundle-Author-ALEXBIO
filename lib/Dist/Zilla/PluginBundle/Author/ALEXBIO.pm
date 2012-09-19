@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.5';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.6';
 }
 
 use strict;
@@ -77,7 +77,7 @@ Dist::Zilla::PluginBundle::Author::ALEXBIO - ALEXBIO's default Dist::Zilla confi
 
 =head1 VERSION
 
-version 1.5
+version 1.6
 
 =head1 SYNOPSIS
 
@@ -109,8 +109,9 @@ equivalent to the following:
     [PodSyntaxTests]
     [PodCoverageTests]
 
-    [ChangelogFromGit]
-    file_name   = Changes
+    [NextRelease]
+
+    [Git::Commit]
 
     [Git::Tag]
     tag_message = %N %v
@@ -174,9 +175,7 @@ sub configure {
 		'PkgVersion'
 	);
 
-	$self -> add_plugins(
-		['ChangelogFromGit' => { file_name  => 'Changes' }],
-	);
+	$self -> add_plugins('NextRelease');
 
 	# test plugins
 	$self -> add_plugins(
@@ -196,6 +195,7 @@ sub configure {
 		$self -> add_plugins('FakeRelease');
 	} else {
 		$self -> add_plugins(
+			'Git::Commit',
 			['Git::Tag' => { tag_message => '%N %v' }]
 		);
 
