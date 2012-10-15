@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.6';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.7';
 }
 
 use strict;
@@ -77,7 +77,7 @@ Dist::Zilla::PluginBundle::Author::ALEXBIO - ALEXBIO's default Dist::Zilla confi
 
 =head1 VERSION
 
-version 1.6
+version 1.7
 
 =head1 SYNOPSIS
 

@@ -6,6 +6,8 @@ use warnings;
 
 use ExtUtils::MakeMaker 6.30;
 
+use File::ShareDir::Install;
+install_share module => "Dist::Zilla::MintingProfile::Author::ALEXBIO", "profiles";
 
 
 my %WriteMakefileArgs = (
@@ -17,7 +19,8 @@ my %WriteMakefileArgs = (
     "Test::More" => 0
   },
   "CONFIGURE_REQUIRES" => {
-    "ExtUtils::MakeMaker" => "6.30"
+    "ExtUtils::MakeMaker" => "6.30",
+    "File::ShareDir::Install" => "0.03"
   },
   "DISTNAME" => "Dist-Zilla-PluginBundle-Author-ALEXBIO",
   "EXE_FILES" => [],
@@ -33,12 +36,13 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Plugin::MakeMaker::Awesome" => 0,
     "Dist::Zilla::Plugin::Test::CheckManifest" => 0,
     "Dist::Zilla::Plugin::Test::Compile" => 0,
+    "Dist::Zilla::Role::MintingProfile::ShareDir" => 0,
     "Dist::Zilla::Role::PluginBundle::Easy" => 0,
     "Moose" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.6",
+  "VERSION" => "1.7",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -63,5 +67,10 @@ delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
 
 WriteMakefile(%WriteMakefileArgs);
 
+{
+package
+MY;
+use File::ShareDir::Install qw(postamble);
+}
 
 
