@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.7';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '1.8';
 }
 
 use strict;
@@ -13,7 +13,7 @@ with 'Dist::Zilla::Role::PluginBundle::Easy';
 
 has 'repo' => (
 	is	=> 'ro',
-	isa	=> 'Str',
+	isa	=> 'Maybe[Str]',
 	lazy	=> 1,
 	default	=> sub {
 			defined $_[0] -> payload -> {repo} ?
@@ -77,7 +77,7 @@ Dist::Zilla::PluginBundle::Author::ALEXBIO - ALEXBIO's default Dist::Zilla confi
 
 =head1 VERSION
 
-version 1.7
+version 1.8
 
 =head1 SYNOPSIS
 
