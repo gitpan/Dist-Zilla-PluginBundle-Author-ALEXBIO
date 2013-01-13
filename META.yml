@@ -31,7 +31,7 @@ requires:
   Moose: 0
   strict: 0
   warnings: 0
-version: 1.8
+version: 2.01
 x_Dist_Zilla:
   perl:
     version: 5.014002
