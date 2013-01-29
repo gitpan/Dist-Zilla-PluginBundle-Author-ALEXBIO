@@ -11,7 +11,7 @@ install_share module => "Dist::Zilla::MintingProfile::Author::ALEXBIO", "profile
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "ALEXBIO's default Dist::Zilla config",
+  "ABSTRACT" => "Plugin bundle used by ALEXBIO",
   "AUTHOR" => "Alessandro Ghedini <alexbio\@cpan.org>",
   "BUILD_REQUIRES" => {
     "File::Find" => 0,
@@ -42,7 +42,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "2.01",
+  "VERSION" => "2.02",
   "test" => {
     "TESTS" => "t/*.t"
   }

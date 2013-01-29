@@ -1,5 +1,5 @@
 {
-   "abstract" : "ALEXBIO's default Dist::Zilla config",
+   "abstract" : "Plugin bundle used by ALEXBIO",
    "author" : [
       "Alessandro Ghedini <alexbio@cpan.org>"
    ],
@@ -52,7 +52,7 @@
       }
    },
    "release_status" : "stable",
-   "version" : "2.01",
+   "version" : "2.02",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.014002"

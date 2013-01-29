@@ -1,6 +1,6 @@
 package Dist::Zilla::MintingProfile::Author::ALEXBIO;
 {
-  $Dist::Zilla::MintingProfile::Author::ALEXBIO::VERSION = '2.01';
+  $Dist::Zilla::MintingProfile::Author::ALEXBIO::VERSION = '2.02';
 }
 
 use strict;
@@ -15,11 +15,16 @@ Dist::Zilla::MintingProfile::Author::ALEXBIO - Minting profile used by ALEXBIO
 
 =head1 VERSION
 
-version 2.01
+version 2.02
+
+=head1 SYNOPSIS
+
+    $ dzil new -P Author::ALEXBIO Some::Module
 
 =head1 DESCRIPTION
 
-Some description here...
+B<Dist::Zilla::MintingProfile::Author::ALEXBIO> is the L<Dist::Zilla> minting
+profile used by ALEXBIO.
 
 =head1 AUTHOR
 

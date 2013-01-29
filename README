@@ -1,9 +1,9 @@
 
 
 This archive contains the distribution Dist-Zilla-PluginBundle-Author-ALEXBIO,
-version 2.01:
+version 2.02:
 
-  ALEXBIO's default Dist::Zilla config
+  Plugin bundle used by ALEXBIO
 
 This software is copyright (c) 2011 by Alessandro Ghedini.
 

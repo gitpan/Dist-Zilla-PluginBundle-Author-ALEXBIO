@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '2.01';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '2.02';
 }
 
 use strict;
@@ -73,23 +73,24 @@ has 'github' => (
 
 =head1 NAME
 
-Dist::Zilla::PluginBundle::Author::ALEXBIO - ALEXBIO's default Dist::Zilla config
+Dist::Zilla::PluginBundle::Author::ALEXBIO - Plugin bundle used by ALEXBIO
 
 =head1 VERSION
 
-version 2.01
+version 2.02
 
 =head1 SYNOPSIS
 
-Synopsis section
+In your dist.ini:
 
-    # in dist.ini
     [@Author::ALEXBIO]
 
 =head1 DESCRIPTION
 
-B<Dist::Zilla::PluginBundle::Author::ALEXBIO> is a L<Dist::Zilla> plugin bundle,
-equivalent to the following:
+B<Dist::Zilla::PluginBundle::Author::ALEXBIO> is the L<Dist::Zilla> plugin
+bundle used by ALEXBIO.
+
+It is equivalent to the following:
 
     [@Basic]
     [@GitHub]
