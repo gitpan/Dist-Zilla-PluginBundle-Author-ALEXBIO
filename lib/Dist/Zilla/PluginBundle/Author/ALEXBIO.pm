@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '2.03';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '2.04';
 }
 
 use strict;
@@ -77,7 +77,7 @@ Dist::Zilla::PluginBundle::Author::ALEXBIO - Plugin bundle used by ALEXBIO
 
 =head1 VERSION
 
-version 2.03
+version 2.04
 
 =head1 SYNOPSIS
 

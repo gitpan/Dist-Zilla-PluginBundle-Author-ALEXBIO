@@ -13,11 +13,7 @@ install_share module => "Dist::Zilla::MintingProfile::Author::ALEXBIO", "profile
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Plugin bundle used by ALEXBIO",
   "AUTHOR" => "Alessandro Ghedini <alexbio\@cpan.org>",
-  "BUILD_REQUIRES" => {
-    "File::Find" => 0,
-    "File::Temp" => 0,
-    "Test::More" => 0
-  },
+  "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30",
     "File::ShareDir::Install" => "0.03"
@@ -28,7 +24,6 @@ my %WriteMakefileArgs = (
   "NAME" => "Dist::Zilla::PluginBundle::Author::ALEXBIO",
   "PREREQ_PM" => {
     "Dist::Zilla" => 0,
-    "Dist::Zilla::Plugin::Bootstrap::lib" => 0,
     "Dist::Zilla::Plugin::Clean" => 0,
     "Dist::Zilla::Plugin::Git" => 0,
     "Dist::Zilla::Plugin::GitHub" => 0,
@@ -42,12 +37,30 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "2.03",
+  "TEST_REQUIRES" => {
+    "File::Find" => 0,
+    "File::Temp" => 0,
+    "Test::More" => 0
+  },
+  "VERSION" => "2.04",
   "test" => {
     "TESTS" => "t/*.t"
   }
 );
 
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  my $tr = delete $WriteMakefileArgs{TEST_REQUIRES};
+  my $br = $WriteMakefileArgs{BUILD_REQUIRES};
+  for my $mod ( keys %$tr ) {
+    if ( exists $br->{$mod} ) {
+      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
+    }
+    else {
+      $br->{$mod} = $tr->{$mod};
+    }
+  }
+}
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
   my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
