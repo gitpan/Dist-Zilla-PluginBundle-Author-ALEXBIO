@@ -23,10 +23,11 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Dist::Zilla::PluginBundle::Author::ALEXBIO",
   "PREREQ_PM" => {
+    "Config::Identity" => 0,
     "Dist::Zilla" => 0,
     "Dist::Zilla::Plugin::Clean" => 0,
     "Dist::Zilla::Plugin::Git" => 0,
-    "Dist::Zilla::Plugin::GitHub" => 0,
+    "Dist::Zilla::Plugin::GitHub" => "0.35",
     "Dist::Zilla::Plugin::InstallRelease" => 0,
     "Dist::Zilla::Plugin::MakeMaker::Awesome" => 0,
     "Dist::Zilla::Plugin::Test::CheckManifest" => 0,
@@ -38,11 +39,11 @@ my %WriteMakefileArgs = (
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
-    "File::Find" => 0,
-    "File::Temp" => 0,
+    "IO::Handle" => 0,
+    "IPC::Open3" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "2.04",
+  "VERSION" => "2.05",
   "test" => {
     "TESTS" => "t/*.t"
   }
