@@ -1,6 +1,6 @@
 package Dist::Zilla::MintingProfile::Author::ALEXBIO;
 {
-  $Dist::Zilla::MintingProfile::Author::ALEXBIO::VERSION = '2.05';
+  $Dist::Zilla::MintingProfile::Author::ALEXBIO::VERSION = '2.06';
 }
 
 use strict;
@@ -15,7 +15,7 @@ Dist::Zilla::MintingProfile::Author::ALEXBIO - Minting profile used by ALEXBIO
 
 =head1 VERSION
 
-version 2.05
+version 2.06
 
 =head1 SYNOPSIS
 
