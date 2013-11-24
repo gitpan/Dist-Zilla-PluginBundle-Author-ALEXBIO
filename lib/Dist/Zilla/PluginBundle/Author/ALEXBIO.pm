@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Author::ALEXBIO;
 {
-  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '2.06';
+  $Dist::Zilla::PluginBundle::Author::ALEXBIO::VERSION = '2.07';
 }
 
 use strict;
@@ -77,7 +77,7 @@ Dist::Zilla::PluginBundle::Author::ALEXBIO - Plugin bundle used by ALEXBIO
 
 =head1 VERSION
 
-version 2.06
+version 2.07
 
 =head1 SYNOPSIS
 
@@ -202,7 +202,9 @@ sub configure {
 
 		$self -> add_plugins('Git::Push') if $self -> git_push;
 
-		$self -> add_plugins('UploadToCPAN');
+		$self -> add_plugins(['UploadToCPAN' => {
+			pause_cfg_file => $ENV{'ZILLA_PAUSE_CFG'} || ''
+		}]);
 	}
 
 	# after release
